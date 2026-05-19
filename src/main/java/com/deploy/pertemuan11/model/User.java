@@ -1,6 +1,5 @@
 package com.deploy.pertemuan11.model;
 
-
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -18,6 +17,7 @@ public class User {
     private String id;
     private String username;
     private String password;
+
     @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
     private Profile profile;
 }

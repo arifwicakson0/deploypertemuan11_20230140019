@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Dashboard</title>
+</head>
+<body>
+
+<h1>Selamat Datang di Halaman Utama</h1>
+
+<p>Berikut adalah detail akun Anda:</p>
+
+<table border="1" cellpadding="8" style="border-collapse: collapse;">
+    <tr>
+        <th>Username</th>
+        <td><span th:text="${user.username}"></span></td>
+    </tr>
+    <tr>
+        <th>Nama Lengkap</th>
+        <td><span th:text="${user.profile.nama}"></span></td>
+    </tr>
+    <tr>
+        <th>Alamat</th>
+        <td><span th:text="${user.profile.alamat}"></span></td>
+    </tr>
+</table>
+
+<br><br>
+
+<a th:href="@{/logout}" style="color: red; font-weight: bold;">
+    Logout dari Akun
+</a>
+
+</body>
+</html>
